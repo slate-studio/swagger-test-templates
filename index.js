@@ -266,6 +266,7 @@ function testGenResponse(swagger, apiPath, operation, response, config, consume,
   if (data.requestData && data.requestData.length > 0) {
     result = '';
     for (var i = 0; i < data.requestData.length; i++) {
+      data.queryParams = JSON.stringify(data.requestData[i].query);
       data.request = JSON.stringify(data.requestData[i].body);
       data.requestMessage = data.requestData[i].description.replace(/'/g, "\\'");  // eslint-disable-line quotes
       result += templateFn(data);

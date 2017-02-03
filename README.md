@@ -79,14 +79,17 @@ so, for example this could be:
                   id: 1,
                   otherProperty: 'some property that is a string'
                  },
-                 description: 'the description for this data'
+                 description: 'REQUIRED FIELD(the description for this data)'
                }]
          },
          get: {
             '200': [ {
               guid: 'some_string_to_place_in_path',
-              anotherPathParam: 100,
-              description: 'valid path or query parameters'
+              query: {
+                page: '1',
+                perPage: '25'
+              },
+              description: 'REQUIRED FIELD(valid path or query parameters)'
             }]
          }
      }

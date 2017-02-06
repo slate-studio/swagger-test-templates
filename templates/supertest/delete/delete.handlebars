@@ -47,7 +47,7 @@
         {{/is}}
         {{else}}
         {{#is ../assertion 'expect'}}
-        expect(res.body).to.equal(null); // non-json response or no schema
+        expect(res.body).to.eql({}); // non-json response or no schema
         {{/is}}
         {{#is ../assertion 'should'}}
         res.body.should.equal(null); // non-json response or no schema
